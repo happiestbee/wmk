@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "serving_configs": [
+    {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0
+    },
+    {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 0
+    },
+    {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "top_k": 0
+    },
+    {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 0
+    }
+  ],
+  "tournament_depths": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "masking_windows": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "reference_config": {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "tournament_depth": 2,
+    "masking_window": 512
+  },
+  "top_k_cache": 64,
+  "nucleus_k": 16384
+}

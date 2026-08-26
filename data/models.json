@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "note": "Ungated status verified anonymously by scripts/00_setup.py; final selections recorded in data/MANIFEST.json.",
+  "architecture_pairs": [
+    {"pair": "A", "family": "qwen2", "base": "Qwen/Qwen2.5-0.5B", "instruct": "Qwen/Qwen2.5-0.5B-Instruct", "params": "0.5B"},
+    {"pair": "B", "family": "llama", "base": "HuggingFaceTB/SmolLM2-1.7B", "instruct": "HuggingFaceTB/SmolLM2-1.7B-Instruct", "params": "1.7B"},
+    {"pair": "C", "family": "llama", "base": "TinyLlama/TinyLlama_v1.1", "instruct": "TinyLlama/TinyLlama-1.1B-Chat-v1.0", "params": "1.1B"},
+    {"pair": "D", "family": "olmo2", "base": "allenai/OLMo-2-0425-1B", "instruct": "allenai/OLMo-2-0425-1B-Instruct", "params": "1B"}
+  ],
+  "scale_series": [
+    {"base": "Qwen/Qwen2.5-0.5B", "instruct": "Qwen/Qwen2.5-0.5B-Instruct", "params": "0.5B"},
+    {"base": "Qwen/Qwen2.5-1.5B", "instruct": "Qwen/Qwen2.5-1.5B-Instruct", "params": "1.5B"},
+    {"base": "Qwen/Qwen2.5-3B", "instruct": "Qwen/Qwen2.5-3B-Instruct", "params": "3B"}
+  ],
+  "optional_extension": [
+    {"base": "Qwen/Qwen2.5-7B", "instruct": "Qwen/Qwen2.5-7B-Instruct", "params": "7B"}
+  ],
+  "ground_truth_generator": "Qwen/Qwen2.5-1.5B-Instruct",
+  "fallbacks": [
+    "Qwen/Qwen2.5-3B",
+    "HuggingFaceTB/SmolLM2-360M",
+    "EleutherAI/pythia-1.4b",
+    "tiiuae/Falcon3-1B-Base"
+  ]
+}
